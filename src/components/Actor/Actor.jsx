@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-const Actor = ({actor}) => {
+const Actor = ({actor, handleBookNow}) => {
     const {image, name, role, salary, age, country} = actor;
     return (
         <div>
@@ -13,7 +13,7 @@ const Actor = ({actor}) => {
               <p>Country: {country}</p>
               <h3>Revenue: {salary}</h3>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Book Now</button>
+                <button className="btn" onClick={() => handleBookNow(actor)}>Book Now</button>
               </div>
             </div>
           </div>
